@@ -85,7 +85,7 @@ export function Petresults({inputValue}){
         }
     ];
     const petItems = pets
-    .filter(pet => pet.name.toLowerCase() === inputValue.toLowerCase() || inputValue === '' )
+    .filter(pet => pet.name.toLowerCase().includes(inputValue.toLowerCase())  || inputValue === '' )
     .map(pet => ( <Petresultitem key={pet.id} {...pet}/> ))
     
     return(

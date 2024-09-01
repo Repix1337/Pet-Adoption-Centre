@@ -8,7 +8,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "female",
             specie: "cats",
             breed: "British",
-            imageSrc: "./images/cat.png"
+            imageSrc: "./images/cat.png",
+            age: 11
         },
         {
             id: 2,
@@ -16,8 +17,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "boy",
             specie: "dogs",
             breed: "Golden Retriever",
-            imageSrc: "./images/dog.png"
-            
+            imageSrc: "./images/dog.png",
+            age: 5
         },
         {
             id: 3,
@@ -25,7 +26,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "female",
             specie: "dogs",
             breed: "Bulldog",
-            imageSrc: "./images/dog.png"
+            imageSrc: "./images/dog.png",
+            age: 12
         },
         {
             id: 4,
@@ -33,7 +35,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "boy",
             specie: "cats",
             breed: "Siamese",
-            imageSrc: "./images/cat.png"
+            imageSrc: "./images/cat.png",
+            age: 2
         },
         {
             id: 5,
@@ -41,7 +44,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "female",
             specie: "dogs",
             breed: "Poodle",
-            imageSrc: "./images/dog.png"
+            imageSrc: "./images/dog.png",
+            age: 9
         },
         {
             id: 6,
@@ -49,7 +53,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "boy",
             specie: "dogs",
             breed: "Labrador",
-            imageSrc: "./images/dog.png"
+            imageSrc: "./images/dog.png",
+            age: 13
         },
         {
             id: 7,
@@ -57,7 +62,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "boy",
             specie: "cats",
             breed: "Persian",
-            imageSrc: "./images/cat.png"
+            imageSrc: "./images/cat.png",
+            age: 1
         },
         {
             id: 8,
@@ -65,7 +71,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "female",
             specie: "dogs",
             breed: "Beagle",
-            imageSrc: "./images/dog.png"
+            imageSrc: "./images/dog.png",
+            age: 4
         },
         {
             id: 9,
@@ -73,7 +80,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "female",
             specie: "cats",
             breed: "Maine Coon",
-            imageSrc: "./images/cat.png"
+            imageSrc: "./images/cat.png",
+            age: 14
         },
         {
             id: 10,
@@ -81,7 +89,8 @@ export function Petresults({inputValue,species,gender}){
             gender: "boy",
             specie: "dogs",
             breed: "Rottweiler",
-            imageSrc: "./images/dog.png"
+            imageSrc: "./images/dog.png",
+            age: 7
         },
         {
             id: 11,
@@ -89,9 +98,38 @@ export function Petresults({inputValue,species,gender}){
             gender: "boy",
             specie: "dogs",
             breed: "Buldog",
-            imageSrc: "./images/dog2.png"
+            imageSrc: "./images/dog2.png",
+            age: 4
+        },
+        {
+            id: 12,
+            name: "Sigma",
+            gender: "boy",
+            specie: "other",
+            breed: "snake",
+            imageSrc: "./images/snake.png",
+            age: 2
+        },
+        {
+            id: 13,
+            name: "Alexandra",
+            gender: "female",
+            specie: "rabbits",
+            breed: "rabbits",
+            imageSrc: "./images/rabbit.png",
+            age: 1
+        },
+        {
+            id: 14,
+            name: "Koleś",
+            gender: "boy",
+            specie: "rabbits",
+            breed: "rabbits",
+            imageSrc: "./images/rabbit.png",
+            age: 3
         }
     ];
+    
     console.log("species: " + species)
     console.log("gender: " + gender)
     let petItems = pets
@@ -110,7 +148,7 @@ export function Petresults({inputValue,species,gender}){
     
     
     return(
-        <div className="w-3/4 h-full bg-slate-500 grid grid-cols-4 grid-rows-3 gap-2 ">
+        <div className="w-3/4 h-full p-4 bg-slate-500 grid grid-cols-4 grid-rows-3 gap-2 ">
             {petItems}
         </div>
     );

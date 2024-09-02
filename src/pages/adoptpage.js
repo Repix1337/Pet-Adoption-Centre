@@ -50,7 +50,7 @@ function AdoptPage() {
       <div className="flex  ">
         <div className="w-1/2 h-[30vh]  bg-gray-800 p-2 rounded-bl-3xl">{petDetails.desc}</div>
         <div className="w-1/2 h-[30vh]  bg-gray-800 text-center p-2  rounded-br-3xl">
-          <button className="bg-gray-900 p-8 text-6xl  rounded-3xl">
+          <button className="bg-gray-900 p-8 text-6xl  rounded-3xl" onClick={() => alert("Thank you for adopting me <3")}>
             Adopt
           </button>
         </div>

@@ -8,6 +8,7 @@ function Searchsite(){
     const [input,setInput] = useState('');
     const [species,setSpecies] = useState([])
     const [gender,setGender] = useState([])
+    const [age,setAge] = useState(0)
     const handleInput = (e) => {
         setInput(e.target.value);
     }
@@ -39,6 +40,9 @@ function Searchsite(){
           }
         });
       };
+      const handleAgeChange = (e) => {
+        setAge(JSON.parse(e.target.value));
+      }
     return (
         <div className="mx-60 h-screen text-white">
             <Navbar/>
@@ -46,10 +50,9 @@ function Searchsite(){
                 <Search onChange={handleInput}/>
             </div>
                 <div className="flex w-full h-full items-center justify-center">
-                    <Filters  onChange={handleSpecieChange} genderChange={handleGenderChange}/>
-                    <Petresults inputValue={input} species={species} gender={gender}/>
+                    <Filters  onChange={handleSpecieChange} genderChange={handleGenderChange} ageChange={handleAgeChange}/>
+                    <Petresults inputValue={input} species={species} gender={gender} age={age}/>
                 </div>
-            
             <Footer/>
         </div>
     )

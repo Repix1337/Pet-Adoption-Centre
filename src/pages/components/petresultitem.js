@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export function Petresultitem({ name, gender, specie, breed, imageSrc }) {
-  const petDetails = {name, gender, specie, breed, imageSrc}
+export function Petresultitem({ name, gender, specie, breed, imageSrc, desc, age }) {
+  const petDetails = {name, gender, specie, breed, imageSrc, desc, age}
   return (
     <Link
   to={"/adopt"}

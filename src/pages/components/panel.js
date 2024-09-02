@@ -8,7 +8,7 @@ export function Panel({ children, headerText, classNamee }) {
     return (
         <motion.div
             ref={ref}
-            className={`w-full ${classNamee}`}
+            className={`w-full bg-gray-900 ${classNamee}`}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={isInView && {
                 opacity: 1,
@@ -19,10 +19,10 @@ export function Panel({ children, headerText, classNamee }) {
                 }
             }}
         >
-            <motion.h1 className="flex justify-center text-8xl text-white p-5 mt-2 bg-slate-700">
+            <motion.h1 className="flex justify-center text-8xl text-white p-5 mt-2 bg-gray-800">
                 {headerText}
             </motion.h1>
-            <div className="w-full flex flex-wrap justify-evenly overflow-y-auto overflow-x-hidden mt-2">
+            <div className="w-full bg-gray-900 flex flex-wrap justify-evenly overflow-y-auto overflow-x-hidden mt-2">
                 {children}
             </div>
         </motion.div>

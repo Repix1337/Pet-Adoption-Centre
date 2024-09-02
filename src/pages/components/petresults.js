@@ -30,7 +30,7 @@ export function Petresults({ inputValue, species, gender, age }) {
     .map((pet) => <Petresultitem key={pet.id} {...pet} />);
 
   return (
-    <div className="w-3/4 h-full p-4 bg-slate-500 grid grid-cols-4 grid-rows-3 gap-2 ">
+    <div className="w-3/4 h-full p-4 bg-slate-500 grid grid-cols-4 grid-rows-4 gap-2 ">
       {petItems}
     </div>
   );

@@ -19,7 +19,7 @@ export function Panel({ children, headerText, classNamee }) {
                 }
             }}
         >
-            <motion.h1 className="flex justify-center text-8xl text-white p-5 mt-2 bg-gray-800">
+            <motion.h1 className="flex justify-center text-8xl font-bold text-white p-5 mt-2 bg-gray-800">
                 {headerText}
             </motion.h1>
             <div className="w-full bg-gray-900 flex flex-wrap justify-evenly overflow-y-auto overflow-x-hidden mt-2">

@@ -4,6 +4,7 @@ export function Petresults({ inputValue, species, gender, age }) {
   console.log("species: " + species);
   console.log("gender: " + gender);
   console.log("age: " + age);
+  let rowsAmount = "grid-rows-"+Math.floor(pets.length / 4);
   let petItems = pets
     .filter(
       (pet) =>
@@ -16,7 +17,7 @@ export function Petresults({ inputValue, species, gender, age }) {
         pet.specie.toLowerCase() === species[0] ||
         pet.specie.toLowerCase() === species[1] ||
         pet.specie.toLowerCase() === species[2] ||
-        pet.specie.toLowerCase() === species[3]
+        pet.specie.toLowerCase() === species[3]   
     )
     .filter(
       (pet) =>
@@ -30,8 +31,10 @@ export function Petresults({ inputValue, species, gender, age }) {
     .map((pet) => <Petresultitem key={pet.id} {...pet} />);
 
   return (
-    <div className="w-3/4 h-full p-4 bg-slate-500 grid grid-cols-4 grid-rows-4 gap-2 ">
+    <div className="w-full h-full p-4 bg-gray-800 overflow-y-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {petItems}
+      </div>
     </div>
   );
 }

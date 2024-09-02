@@ -16,7 +16,7 @@ function AdoptPage() {
       <div className="h-[50vh]  text-center flex bg-gray-800 rounded-t-3xl">
         <img
           src={petDetails.imageSrc}
-          className="w-2/4 p-8 rounded-[5rem]"
+          className="w-2/4 p-8 rounded-[5rem] object-cover"
           alt={petDetails.name}
         />
         <div className="w-2/4 bg-gray-800 p-2 rounded-t-3xl">

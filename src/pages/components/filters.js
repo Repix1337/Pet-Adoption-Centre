@@ -1,7 +1,7 @@
 export function Filters({ onChange, genderChange, ageChange}) {
     
     return (
-      <div className="w-1/4 h-full bg-slate-600">
+      <div className="w-1/4 h-full bg-gray-800">
         <h1 className="flex justify-center text-7xl m-3">Filters</h1>
         <form className="ml-3">
           <h1 className="text-4xl">Species:</h1>

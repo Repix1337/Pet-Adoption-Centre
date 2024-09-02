@@ -4,20 +4,17 @@ import { Link } from "react-router-dom";
 export function Petresultitem({ name, gender, specie, breed, imageSrc, desc, age }) {
   const petDetails = {name, gender, specie, breed, imageSrc, desc, age}
   return (
-    <Link
-  to={"/adopt"}
-  state={{petDetails}}>
-    
-      <div className="bg-gray-100 w-[95%] h-[95%] text-center text-2xl text-black m-2 rounded-xl p-1 flex flex-col justify-center items-center overflow-hidden hover:scale-110 duration-500 ease-in-out">
-        <div className="w-full h-[90%] overflow-hidden">
-          <img 
-            src={imageSrc} 
-            alt={name} 
-            className="w-full h-full object-cover rounded-sm"
-          />
-        </div>
-        <p>{name}</p>
+    <Link to="/adopt" state={{ petDetails }} className="block">
+    <div className="bg-zinc-700 h-full text-center text-xl text-white font-bold rounded-2xl p-2 flex flex-col justify-between items-center overflow-hidden hover:scale-105 transition-transform duration-300 ease-in-out">
+      <div className="w-full pb-[100%] relative overflow-hidden">
+        <img 
+          src={imageSrc} 
+          alt={name} 
+          className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
+        />
       </div>
-    </Link>
+      <p className="mt-2">{name}</p>
+    </div>
+  </Link>
   );
 }

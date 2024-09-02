@@ -44,12 +44,12 @@ function Searchsite(){
         setAge(JSON.parse(e.target.value));
       }
     return (
-        <div className="mx-60 h-screen text-white">
+        <div className="mx-0 lg:mx-40 text-white flex flex-col">
             <Navbar/>
-            <div className="w-full  flex items-center justify-center">
+            <div className="w-full flex items-center justify-center">
                 <Search onChange={handleInput}/>
             </div>
-                <div className="flex w-full h-full items-center justify-center">
+                <div className="flex flex-grow w-full">
                     <Filters  onChange={handleSpecieChange} genderChange={handleGenderChange} ageChange={handleAgeChange}/>
                     <Petresults inputValue={input} species={species} gender={gender} age={age}/>
                 </div>

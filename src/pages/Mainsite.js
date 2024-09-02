@@ -28,19 +28,22 @@ function MainSite() {
     });
   }
   useEffect(() => {
-    setInterval(() => {
-      if (window.scrollY === 0){
-        setIsVisible(false);
-        return
-      }
-      else {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
         setIsVisible(true);
-        return
+      } else {
+        setIsVisible(false);
       }
-    }, 1000)
-  }, [])
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <div className="mainSite w-[100vw] min-h-screen bg-slate-800 overflow-y-auto overflow-x-hidden ">
+    <div className="mainSite mx-32 min-h-screen bg-slate-800 overflow-y-auto overflow-x-hidden">
       <Navbar handleClick={handleNavButtonClick}/>
       <Main />
       <PetPanel/>

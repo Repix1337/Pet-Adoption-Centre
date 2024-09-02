@@ -6,5 +6,6 @@
   }
   html, body {
     overflow-x: hidden; /* Hide horizontal overflow */
-    background-color: rgb(30,41,59);
+      --tw-bg-opacity: 1;
+      background-color: rgb(17 24 39 / var(--tw-bg-opacity)) /* #111827 */;
   }

@@ -2,25 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
-import MainSite from './pages/Mainsite.js';
-import reportWebVitals from './reportWebVitals.js';
-import Searchsite from './pages/Searchsite.js';
+import MainSite from './pages/Mainsite';
+import reportWebVitals from './reportWebVitals';
+import Searchsite from './pages/Searchsite';
+import AdoptPage from './pages/adoptpage'; // Make sure the import path is correct
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode>
-    <Routes>
-      <Route path="/" element={<MainSite />} />
-    </Routes>
-    <Routes>
-      <Route path="/search" element={<Searchsite />} />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<MainSite />} />
+        <Route path="/search" element={<Searchsite />} />
+        <Route path="/adopt" element={<AdoptPage />} />
+        {/* You can add more routes here as needed */}
+      </Routes>
     </React.StrictMode>
   </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
